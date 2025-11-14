@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1.health import router as health_router
 from app.core.config import settings
+from app.api.v1.accounts import router as accounts_router
 
 # Simple startup log for environment visibility
 print(f"Starting API in {settings.ENV} mode")
@@ -22,3 +23,4 @@ app.add_middleware(
 )
 
 app.include_router(health_router, prefix="/api/v1")
+app.include_router(accounts_router, prefix="/api/v1")
