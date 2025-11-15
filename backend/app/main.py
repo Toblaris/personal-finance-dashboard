@@ -8,7 +8,7 @@ from app.api.v1.accounts import router as accounts_router
 print(f"Starting API in {settings.ENV} mode")
 
 app = FastAPI(
-    title="Personal Finance API",
+    title="Personal Finance Dashboard",
     debug=settings.ENV == "development"
 )
 
